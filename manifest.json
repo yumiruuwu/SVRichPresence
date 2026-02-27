@@ -1,10 +1,10 @@
 ﻿{
-  "Name": "Rich Presence SVE",
+  "Name": "Rich Presence for Stardew Valley+",
   "Author": "RuiNtD & lulyanh",
   "Version": "3.1.0",
   "Description": "Shows your in-game state on your Discord profile. Now support SVE locations.",
-  "UniqueID": "lulyanh.SVERichPresence",
-  "EntryDll": "SVERichPresence.dll",
+  "UniqueID": "lulyanh.SVRichPresence",
+  "EntryDll": "SVRichPresence.dll",
   "MinimumApiVersion": "3.0",
   "UpdateKeys": [
     "Nexus:2156",
