@@ -1,13 +1,13 @@
 ﻿{
-  "Name": "Rich Presence",
-  "Author": "RuiNtD",
-  "Version": "3.0.3",
-  "Description": "Shows your in-game state on your Discord profile.",
-  "UniqueID": "RuiNtD.RichPresence",
-  "EntryDll": "SVRichPresence.dll",
+  "Name": "Rich Presence SVE",
+  "Author": "RuiNtD & lulyanh",
+  "Version": "3.1.0",
+  "Description": "Shows your in-game state on your Discord profile. Now support SVE locations.",
+  "UniqueID": "lulyanh.SVERichPresence",
+  "EntryDll": "SVERichPresence.dll",
   "MinimumApiVersion": "3.0",
   "UpdateKeys": [
     "Nexus:2156",
-    "GitHub:RuiNtD/SVRichPresence"
+    "GitHub:yumiruuwu/SVRichPresence"
   ]
 }
