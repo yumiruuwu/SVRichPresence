@@ -1,0 +1,24 @@
+name: .NET Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: windows-latest # or ubuntu-latest, macos-latest
+
+    steps:
+    - uses: actions/checkout@v4 # Step 1: Check out the repository code
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4 # Step 2: Install the desired .NET SDK version
+      with:
+        dotnet-version: '8.0.x' # Specify the .NET version you need, e.g., '6.0.x', '8.0.x', '9.0.x'
+    - name: Restore dependencies
+      run: dotnet restore # Step 3: Restore project dependencies
+    - name: Build project
+      run: dotnet build --no-restore --configuration Release # Step 4: Compile the project in Release configuration
+    - name: Run tests (optional)
+      run: dotnet test --no-build # Step 5: Run unit tests if applicable
