@@ -15,7 +15,7 @@ namespace SVRichPresence
   {
     public string State = "In Menus";
     public string Details = "";
-    public string LargeImageText = "{ Location }"; // { Activity } will always show Name instead of DisplayName
+    public string LargeImageText = "At { Location }"; // { Activity } will always show Name instead of DisplayName
     public string SmallImageText = "";
     public bool ForceSmallImage = false;
   }
