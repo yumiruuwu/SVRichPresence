@@ -31,7 +31,7 @@ namespace SVRichPresence
     {
       State = "{ GameInfo }";
       Details = "{Farm} | {Money}";
-      LargeImageText = "Wandering around { Location }"
+      LargeImageText = "Wandering around { Location }";
       SmallImageText = "{ Date }";
     }
   }
