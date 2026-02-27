@@ -19,6 +19,11 @@ namespace SVRichPresence
     private static readonly string steamId = "413150";
     private static readonly string ModURL = "https://www.nexusmods.com/stardewvalley/mods/2156";
 
+    private static readonly Dictionary<string, string> CustomLocationNames = new()
+    {
+        { "Custom_BlueMoonVineyard", "Blue Moon Vineyard" },
+    };
+
     private ModConfig Config = new();
     private IRichPresenceAPI api;
     private DiscordRpcClient client;
@@ -110,7 +115,15 @@ namespace SVRichPresence
       );
       WTag("FarmName", () => Game1.player.farmName.ToString());
       WTag("PetName", () => Game1.player.hasPet() ? Game1.player.getPetDisplayName() : api.None);
-      WTag("Location", () => Game1.currentLocation.Name);
+      //WTag("Location", () => Game1.currentLocation.Name);
+      WTag("Location", () =>
+      {
+          var name = Game1.currentLocation.Name;
+
+          return CustomLocationNames.TryGetValue(name, out var customName)
+              ? customName
+              : name;
+      });
       WTag(
         "RomanticInterest",
         () => Utility.getTopRomanticInterest(Game1.player)?.getName() ?? api.None
