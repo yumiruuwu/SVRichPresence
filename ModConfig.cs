@@ -6,7 +6,7 @@ namespace SVRichPresence
   {
     public SButton ReloadConfigButton = SButton.F5;
     public bool ShowGlobalPlayTime = false;
-    public bool AddGetModButton = true;
+    public bool AddGetModButton = false;
     public MenuPresence MenuPresence = new();
     public GamePresence GamePresence = new();
   }
@@ -15,7 +15,7 @@ namespace SVRichPresence
   {
     public string State = "In Menus";
     public string Details = "";
-    public string LargeImageText = "{ Activity }";
+    public string LargeImageText = "{ Location }"; // { Activity } will always show Name instead of DisplayName
     public string SmallImageText = "";
     public bool ForceSmallImage = false;
   }
